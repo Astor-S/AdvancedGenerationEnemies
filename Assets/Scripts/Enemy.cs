@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public void SetDirection(Vector3 targetPosition)
+    private Vector3 _targetPosition;
+
+    private void Update()
     {
-        Vector3 direction = (targetPosition).normalized;
-        transform.forward = direction;
+        transform.LookAt( _targetPosition );
+    }
+
+    public void SetTarget(Vector3 targetPosition)
+    {
+        _targetPosition = targetPosition;
     }
 }
