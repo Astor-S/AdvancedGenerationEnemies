@@ -1037,7 +1037,7 @@ MonoBehaviour:
   - {fileID: 168106597}
   - {fileID: 761776061}
   - {fileID: 1848569576}
-  _spawnFrequency: 4
+  _spawnFrequency: 2
   _minRange: 0
 --- !u!4 &2099802385
 Transform:
