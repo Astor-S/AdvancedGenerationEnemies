@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
             Enemy enemyPrefab = spawnPoint.EnemyPrefab;
             Enemy newEnemy = Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
 
-            newEnemy.SetDirection(spawnPoint.TargetPosition);
+            newEnemy.SetTarget(spawnPoint.TargetPosition);
 
             yield return _wait;
         }
