@@ -29,10 +29,10 @@ public class Spawner : MonoBehaviour
             int spawnIndex = Random.Range(_minRange, _spawnPoints.Count);
             SpawnPoint spawnPoint = _spawnPoints[spawnIndex];
 
-            Enemy enemyPrefab = spawnPoint.GetEnemyPrefab();
+            Enemy enemyPrefab = spawnPoint.EnemyPrefab;
             Enemy newEnemy = Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
 
-            newEnemy.SetDirection(spawnPoint.GetTargetPosition());
+            newEnemy.SetDirection(spawnPoint.TargetPosition);
 
             yield return _wait;
         }
