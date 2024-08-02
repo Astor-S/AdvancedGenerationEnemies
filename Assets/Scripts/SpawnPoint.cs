@@ -6,6 +6,5 @@ public class SpawnPoint : MonoBehaviour
     [SerializeField] private Target _target;
 
     public Enemy EnemyPrefab => _enemyPrefab;
-
     public Vector3 TargetPosition => _target.transform.position;
 }
